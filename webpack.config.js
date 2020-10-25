@@ -1,12 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebapackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/js/entry.js',
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'main.js',
+        filename: './js/bundle.js',
     },
     module: {
         rules: [
@@ -24,9 +25,12 @@ module.exports = {
         ],
     },
     plugins: [
-        new MiniCssExtractPlugin(),
-        new HtmlWebapackPlugin({
-            template: './src/index.html',
+        new MiniCssExtractPlugin({
+            filename: './css/style.css',
         }),
+        new HtmlWebapackPlugin({
+            template: './src/templates/index.html',
+        }),
+        new CleanWebpackPlugin(),
     ]
 }
