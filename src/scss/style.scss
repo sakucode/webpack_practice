@@ -1,0 +1,19 @@
+@import './footer.scss';
+
+body {
+    color: lightblue;
+}
+
+$colorTest: #444;
+
+.content {
+    .title {
+        font-size: 1.5em;
+        color: $colorTest;
+    }
+
+    .title-lg {
+        @extend .title;
+        font-size: 2em;
+    }
+}
