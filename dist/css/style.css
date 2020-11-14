@@ -1,13 +1,2 @@
-.footer {
-  background-color: #ddd; }
-
-body {
-  color: lightblue; }
-
-.content .title, .content .title-lg {
-  font-size: 1.5em;
-  color: #444; }
-
-.content .title-lg {
-  font-size: 2em; }
+.footer{background-color:#ddd}body{color:lightblue}.content .title,.content .title-lg{font-size:1.5em;color:#444}.content .title-lg{font-size:2em}
 
